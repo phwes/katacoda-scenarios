@@ -22,4 +22,6 @@ Open a tty to the container...
 #### Easy-access logs
 `tail /var/log/apache2/error.log`{{execute}}  
 `tail /var/log/apache2/access.log`{{execute}}  
-`cd /usr/local/apache2/htdocs/`{{execute}}  
+#### Easy-access directories
+`cd /var/www/html/`{{execute}}  
+`cd /etc/apache2`{{execute}}  
