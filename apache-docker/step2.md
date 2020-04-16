@@ -15,10 +15,10 @@ Open a tty to the container...
 ## Adapt container environment
 `apt update`{{execute}}  
 `apt install nano`{{execute}}  
-`service stop apache2`{{execute}}  
+`service apache2 stop`{{execute}}  
 `apt install php`{{execute}}  
-`service start apache2`{{execute}}  
-`service status apache2`{{execute}}  
+`service apache2 start`{{execute}}  
+`service apache2 status`{{execute}}  
 `nano /usr/local/apache2/htdocs/index.html`{{execute}}
 `tail /var/log/apache2/error.log`{{execute}}  
 `tail /var/log/apache2/access.log`{{execute}}  
