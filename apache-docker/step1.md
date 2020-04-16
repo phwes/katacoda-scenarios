@@ -4,6 +4,8 @@ Katacoda's ubuntu image has not updated it's PPAs for a while. This might take a
 To interact with our mysql container, when it has been started, we will use the normal mysql-client:  
 `apt install mysql-client`{{execute}}  
 
+# MySQL
+
 ## Downloading images
 Docker is built around so called images...  
 `docker pull mysql`{{execute}}   
