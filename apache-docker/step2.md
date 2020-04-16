@@ -6,6 +6,6 @@
 
 ## Start and access apache container
 Start container...  
-`docker run --name a1 httpd -d`{{execute}}  
+`docker run --name a1 -d httpd`{{execute}}  
 Open a tty to the container...  
 `docker exec -it a1 /bin/bash`{{execute}}  
