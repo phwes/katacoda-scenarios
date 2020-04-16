@@ -2,7 +2,9 @@
 # Apache web server
 
 ## Pull apache image
-`docker pull httpd`{{execute}}
+`docker pull httpd`{{execute}}  
+Or the one with PHP:  
+`docker pull php:7.2-apache`{{execute}}
 
 ## Start and access apache container
 Start container...  
