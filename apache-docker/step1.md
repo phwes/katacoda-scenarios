@@ -2,7 +2,7 @@
 Katacoda's ubuntu image has not updated it's PPAs for a while. This might take a while:  
 `apt update`{{execute}}  
 To interact with our mysql container, when it has been started, we will use the normal mysql-client:  
-`install mysql-client`{{execute}}  
+`apt install mysql-client`{{execute}}  
 
 ## Downloading images
 Docker is built around so called images...  
