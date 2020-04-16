@@ -6,9 +6,7 @@ To interact with our mysql container, when it has been started, we will use the 
 
 ## Downloading images
 Docker is built around so called images...  
-
-`docker pull mysql`{{execute}}  
-`docker pull httpd`{{execute}}  
+`docker pull mysql`{{execute}}   
 
 ## Set up MySQL container
 First we will start an MySQL container...  
