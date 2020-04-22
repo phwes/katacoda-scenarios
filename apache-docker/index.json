@@ -33,6 +33,10 @@
         {
           "file": "test_mysql_DB",
           "target": "~/"
+        },
+        {
+          "file": "test_mysql_query",
+          "target": "~/"
         }
       ]
     }
