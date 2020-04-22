@@ -4,9 +4,12 @@
 ## Pull apache image
 `docker pull php:7.2-apache`{{execute}}
 
+## Create persistent storage
+mkdir html
+
 ## Start and access apache container
 Start container...  
-`docker run --name a1 -d -p 8080:80 php:7.2-apache`{{execute}}  
+`docker run --name a1 -v /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
 More secure:  
 `docker run --name a1 -d -p 127.0.0.1:8080:80 php:7.2-apache`{{execute}}  
 Open a tty to the container...  
