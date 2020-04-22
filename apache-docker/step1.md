@@ -22,3 +22,7 @@ To access...
 `mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
 Try a command...  
 `show databases;`{{execute}}  
+## Fix hashing
+The PHP version we will use and MySQL are experienceing some password compatability issues, unrelated to docker.  
+To fix this, for the root user, we run the following command in the mysql tty:  
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'guest';
