@@ -2,10 +2,10 @@
 # Apache web server
 
 ## Pull apache image
-`docker pull php:7.2-apache`{{execute}}
+`docker pull php:7.2-apache`{{execute}}  
 
 ## Create persistent storage
-mkdir html
+`mkdir html`{{execute}}  
 
 ## Start and access apache container
 Start container...  
@@ -17,8 +17,12 @@ Open a tty to the container...
 
 ## Adapt container environment
 `apt update`{{execute}}  
-`apt install nano`{{execute}}
-
+`apt install nano`{{execute}}  
+for some reason, this image does not come with the mysqli extension needed for MySQL communication.  
+To fix this we run the following commands:  
+`docker-php-ext-install mysqli`{{execute}}  
+`docker-php-ext-enable mysqli`{{execute}}  
+`apachectl restart`{{execute}}  
 ## Create index page
 `nano /var/www/html/index.php`{{execute}}  
 
