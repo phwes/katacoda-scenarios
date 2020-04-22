@@ -29,7 +29,11 @@
         {
           "file": "test.txt",
           "target": "~/"
-        }
+        },
+        {
+          "file": "test_mysql_DB",
+          "target": "~/"
+        },
       ]
     }
   },
