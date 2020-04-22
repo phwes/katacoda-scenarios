@@ -33,7 +33,7 @@
         {
           "file": "test_mysql_DB",
           "target": "~/"
-        },
+        }
       ]
     }
   },
