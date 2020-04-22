@@ -25,4 +25,4 @@ Try a command...
 ## Fix hashing
 The PHP version we will use and MySQL are experienceing some password compatability issues, unrelated to docker.  
 To fix this, for the root user, we run the following command in the mysql tty:  
-´ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'guest';´{{execute}}  
+`ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'guest';`{{execute}}  
