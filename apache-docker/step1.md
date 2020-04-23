@@ -28,7 +28,7 @@ Note that with the `-v` parameter, the mysql_volume is created automatically.
 To access the MySQL databases inside the container we simply run the mysql command from our host. This will connect to the MySQL interface on port 3306 on the container.     
 `mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
 Since this is the first container we assume it starts on the specified IP, but if this was incorrect. Run the following command and then use the address that show up:  
-`docker inspect m1 | grep "address"`{{execute}}
+`docker inspect m1 | grep "IPAddress"`{{execute}}
 Now you should have a MySQL interface showing. Try to run a MySQL command:  
 `show databases;`{{execute}}  
 ## Fix hashing, DO NOT SKIP THIS STEP
