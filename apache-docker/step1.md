@@ -24,7 +24,7 @@ First we will start an MySQL container, MySQL stores its data in /var/lib/mysql 
 Note that with the `-v` parameter, the mysql_volume is created automatically.  
 
 ## Test the MySQL database
-*Note: Katacoda can experience some frome time to time. Meaning that a command fails. Wait a moment and try the command again.*   
+*Note: Katacoda can experience some frome time to time. Meaning that if a command fails, wait a moment and then try the command again.*   
 To access...  
 `mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
 Try a command...  
