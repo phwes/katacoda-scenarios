@@ -35,3 +35,5 @@ Now you should have a MySQL interface showing. Try to run a MySQL command:
 The PHP version we will use and MySQL are experienceing some password hashing compatability issues, unrelated to docker.  
 To fix this, for the root user, we need to run the following command in the MySQL interface:  
 `ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'guest';`{{execute}}  
+## Exit MySQL interface
+`exit`{{exexute}}
