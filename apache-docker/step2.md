@@ -13,6 +13,7 @@ With link:
 Just like when we started the MySQL container, we want to use additional parameters when starting the apache container. In addition to the parameters we used for the MySQL container, we will use:  
 * `--link`, the link parameter creates a link between docker containers. While our apache container certainly would be able to communicate with our MySQL container without a link, the IP address might change. So instead we use a link that adds and maintains a reference to our MySQL container in the /etc/hosts file.   
 * *`-p`*, this parameter maps a host port to a container port. By using this parameter you can host multiple applications that, from the perspective of the container, listen on the same port. But outside of the container, the application is accessed on whatever port the host machine has been assigned to forward from. We will let the port 8080 on the host machine map to the 80 port on the apache container.  
+
 `docker run --name a1 --link m1:mysql-server -mount /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
 As you probably noticed, we received an error while running the previous command. That is because we used `--mount` insted of `-v`. While docker volumes will create the directory for you, bind mounts will give you an error if the directory exists. While the two parameters come from different backgrounds, this is the key difference in docker at the moment.  
 So create the directory  
