@@ -5,9 +5,9 @@ We will begin by creating something for Apache to extract from the database.
 Start a mysql client session:  
 `mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
 Create a database:  
-`CREATE myTestDB`{{execute}}
+`CREATE database myTestDB;`{{execute}}
 Select the database:  
-`USE myTestDB`{{execute}}  
+`USE myTestDB;`{{execute}}  
 Create a new table:  
 `CREATE TABLE meetings ( id INT(6)  UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30) NOT NULL, location VARCHAR(30) NOT NULL, time TIME);`{{execute}}  
 Insert a few entries into the table:   
