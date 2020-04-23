@@ -12,7 +12,9 @@ Create a new table:
 `CREATE TABLE meetings ( id INT(6)  UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30) NOT NULL, location VARCHAR(30) NOT NULL, time TIME);`{{execute}}  
 Insert a few entries into the table:   
 `INSERT INTO meetings (name, location, time) VALUES ('Breakfast meeting', 'Canteen', '08:00:00' );`{{execute}}  
+  
 `INSERT INTO meetings (name, location, time) VALUES ('Midday meeting', '802', '11:30:00' );`{{execute}}  
+  
 `INSERT INTO meetings (name, location, time) VALUES ('After work', 'The Red room', '20:00:00' );`{{execute}}  
 Exit MySQL interface:  
 `exit`{{execute}}  
