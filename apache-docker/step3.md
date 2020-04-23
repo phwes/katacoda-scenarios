@@ -3,7 +3,7 @@ Now that we have a MySQL container and Apache container, let's put something tog
 ## Create MySQL entries
 We will begin by creating something for Apache to extract from the database.  
 Start a mysql client session:  
-`mysql -uroot -pguest -h m1 -P 3306`{{execute}}  
+`mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
 Create a database:  
 `CREATE myTestDB`{{execute}}
 Select the database:  
