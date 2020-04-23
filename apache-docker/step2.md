@@ -6,34 +6,23 @@ You rarely use just a database without any other service accessing it. For this 
 `docker pull php:7.2-apache`{{execute}}  
 
 ## Start and access apache container
-Start container...  
-`docker run --name a1 -v /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
-With link:  
-`docker run --name a1 --link m1:mysql-server -v /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
-Just like when we started the MySQL container, we want to use additional parameters when starting the apache container. In addition to the parameters we used for the MySQL container, we will use:  
+Just like when we started the MySQL container, we want to use additional parameters when starting the apache container. In addition to parameters we used for the MySQL container, we will use:  
 * `--link`, the link parameter creates a link between docker containers. While our apache container certainly would be able to communicate with our MySQL container without a link, the IP address might change. So instead we use a link that adds and maintains a reference to our MySQL container in the /etc/hosts file.   
 * *`-p`*, this parameter maps a host port to a container port. By using this parameter you can host multiple applications that, from the perspective of the container, listen on the same port. But outside of the container, the application is accessed on whatever port the host machine has been assigned to forward from. We will let the port 8080 on the host machine map to the 80 port on the apache container.  
 
-`docker run --name a1 --link m1:mysql-server -mount /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
-As you probably noticed, we received an error while running the previous command. That is because we used `--mount` insted of `-v`. While docker volumes will create the directory for you, bind mounts will give you an error if the directory exists. While the two parameters come from different backgrounds, this is the key difference in docker at the moment.  
-So create the directory  
-`mkdir html`{{execute}}  
-and run the command again  
+Let us start the container:  
 `docker run --name a1 --link m1:mysql-server -mount /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
 
 ## Open a shell to the container
-Sometimes you would like to enter the environment with a shell. To do this we run bash from within the container with the `docker exec` command. But without parameters this shell would be daemonized like the container, so to make it interactive for us we add the `-it` paramter:    
+Sometimes you would like to enter the environment with a shell. To do this, we will run the bash command from within the container, with the `docker exec` command. But without parameters this shell would be daemonized like the container, so to make it interactive for us we add the `-it` paramter:  
 `docker exec -it a1 /bin/bash`{{execute}}  
-
-## Adapt container environment
-`apt update`{{execute}}  
-`apt install nano`{{execute}}  
 
 ### Install mysqli 
 For php to establish a connection to the MySQL database, it needs the mysqli extension. But foror some reason, this image does not come with the extension and therefor we have to download it with the `docker-php-ext` commands supplied to us by the php image:  
 `docker-php-ext-install mysqli`{{execute}}  
 `docker-php-ext-enable mysqli`{{execute}}  
 `apachectl restart`{{execute}}  
+
 ## Create index page
 I have supplied you with a couple of test php-pages that can be used for the apache server.  
 Let us begin by moving the php testpage to our bind point:  
