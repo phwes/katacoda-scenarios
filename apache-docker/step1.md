@@ -25,11 +25,13 @@ Note that with the `-v` parameter, the mysql_volume is created automatically.
 
 ## Test the MySQL database
 *Note: Katacoda can experience some lag from time to time. Meaning that if a command fails, wait a moment and then try the command again.*   
-To access...  
+To access the MySQL databases inside the container we simply run the mysql command from our host. This will connect to the MySQL interface on port 3306 on the container.     
 `mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
-Try a command...  
+Since this is the first container we assume it starts on the specified IP, but if this was incorrect. Run the following command and then use the address that show up:  
+`docker inspect m1 | grep "address"`{{execute}}
+Now you should have a MySQL interface showing. Try to run a MySQL command:  
 `show databases;`{{execute}}  
-## Fix hashing
-The PHP version we will use and MySQL are experienceing some password compatability issues, unrelated to docker.  
-To fix this, for the root user, we run the following command in the mysql tty:  
+## Fix hashing, DO NOT SKIP THIS STEP
+The PHP version we will use and MySQL are experienceing some password hashing compatability issues, unrelated to docker.  
+To fix this, for the root user, we need to run the following command in the MySQL interface:  
 `ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'guest';`{{execute}}  
