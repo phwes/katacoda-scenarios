@@ -36,4 +36,4 @@ The PHP version we will use and MySQL are experienceing some password hashing co
 To fix this, for the root user, we need to run the following command in the MySQL interface:  
 `ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'guest';`{{execute}}  
 ## Exit MySQL interface
-`exit`{{exexute}}
+`exit`{{execute}}
