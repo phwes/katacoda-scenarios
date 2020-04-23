@@ -21,7 +21,7 @@ To create and start a docker container we use the `docker run [container image]`
 ## Set up MySQL container
 First we will start an MySQL container, MySQL stores its data in /var/lib/mysql so therefore we connect the persistent storage to that directory.  
 `docker run --name m1 -v /root/mysql_volume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=guest -d mysql:8.0.19`{{execute}}  
-Note that with the `-v` parameter, the mysql_volume is created automatically.  
+Note that with the `-v` parameter, the directory mysql_volume is created automatically.  
 
 ## Test the MySQL database
 *Note: Katacoda can experience some lag from time to time. Meaning that if a command fails, wait a moment and then try the command again.*   
