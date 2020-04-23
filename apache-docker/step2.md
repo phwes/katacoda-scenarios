@@ -20,7 +20,9 @@ Sometimes you would like to enter the environment with a shell. To do this, we w
 ### Install mysqli 
 For php to establish a connection to the MySQL database, it needs the mysqli extension. But foror some reason, this image does not come with the extension and therefor we have to download it with the `docker-php-ext` commands supplied to us by the php image:  
 `docker-php-ext-install mysqli`{{execute}}  
+  
 `docker-php-ext-enable mysqli`{{execute}}  
+  
 `apachectl restart`{{execute}}  
 
 ## Create index page
