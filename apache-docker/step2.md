@@ -10,8 +10,8 @@
 ## Start and access apache container
 Start container...  
 `docker run --name a1 -v /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
-More secure:  
-`docker run --name a1 -d -p 127.0.0.1:8080:80 php:7.2-apache`{{execute}}  
+With link:  
+`docker run --name a1 --link m1:mysql-server -v /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
 Open a tty to the container...  
 `docker exec -it a1 /bin/bash`{{execute}}  
 
