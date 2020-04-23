@@ -7,7 +7,7 @@ To interact with our mysql container, when it has been started, we will use the 
 # MySQL
 
 ## Downloading images
-Docker containers are built from so called images. These images can either be built from a dockerfile, or loaded from the docker hub. If you try to run a container with a image that has not been downloaded, docker will search and pull the image from docker hub automatically. But for the sake of this tutorial, we will pull the MySQL image manually:     
+Docker containers are run from so called images. These images can either be built from a dockerfile, or loaded from the docker hub. If you try to run a container with a image that has not been downloaded, docker will search and pull the image from docker hub automatically. But for the sake of this tutorial, we will pull the MySQL image manually:     
 `docker pull mysql:8.0.19`{{execute}}  
 The nymbers after the colon refer to the version number. 
 
