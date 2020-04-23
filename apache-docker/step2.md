@@ -34,11 +34,5 @@ For php to establish a connection to the MySQL database, it needs the mysqli ext
 ## Create index page
 I have supplied you with a couple of test php-pages that can be used for the apache server.  
 Let us begin by moving the php testpage to our bind point:  
-`mv test.txt /html/index.php`{{execute}}  
-
-#### Easy-access logs
-`tail /var/log/apache2/error.log`{{execute}}  
-`tail /var/log/apache2/access.log`{{execute}}  
-#### Easy-access directories
-`cd /var/www/html/`{{execute}}  
-`cd /etc/apache2`{{execute}}  
+`mv test.txt html/index.php`{{execute}}  
+Click the + sign in the toolbar of the terminal and `select port to view on Host1`. Then enter the port on our host machine that is connected to the apache container (8080). You should now see a php information page. 
