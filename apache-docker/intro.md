@@ -1,5 +1,5 @@
 ## Docker
-Docker containers are a fast and easy way to deploy and test different applications. From a docker image, it only takes a singe command to get an up and running container. While containers are useful for many purposes, they often need to communicate with other hosts or containers. In this tutorial we will set up two containers thay will do just that, communicate with each other.   
+Docker containers are a fast and easy way to deploy and test different applications. From a docker image, it only takes a singel command to get an up and running container. While containers are useful for many purposes, they often need to communicate with other hosts or containers. In this tutorial we will set up two containers that will do just that, communicate with each other.   
 
 ## Content
 This tutorial will go through:  
