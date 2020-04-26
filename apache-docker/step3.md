@@ -1,5 +1,5 @@
 # Putting things together
-Now that we have a MySQL container and Apache container, let's put something together and see if it they can communicate with each other!  
+Now that we have both a MySQL container and an Apache container, let's put something together and see if it they can communicate with each other!  
 ## Create MySQL entries
 We will begin by creating something for Apache to extract from the database.  
 Start a mysql client session:  
