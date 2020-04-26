@@ -8,7 +8,7 @@ You rarely use just a database without any other service accessing it. For this 
 ## Start and access apache container
 Just like when we started the MySQL container, we want to use additional parameters when starting the apache container. In addition to parameters we used for the MySQL container, we will use:  
 * `--link`, the link parameter creates a link between docker containers. While our apache container certainly would be able to communicate with our MySQL container without a link, the IP address might change. So instead we use a link that adds and maintains a reference to our MySQL container in the /etc/hosts file.   
-* *`-p`*, this parameter maps a host port to a container port. By using this parameter you can host multiple applications that, from the perspective of the container, listen on the same port. But outside of the container, the application is accessed on whatever port the host machine has been assigned to forward from. We will let the port 8080 on the host machine map to the 80 port on the apache container.  
+* *`-p`*, this parameter maps a host port to a container port. By using this parameter you can host multiple applications that, from the perspective of the container, listen at the same port. But outside of the container, the application is accessed on whatever port the host machine has been assigned to forward from. We will let the port 8080 on the host machine map to the 80 port on the apache container.  
 
 Let us start the container:  
 `docker run --name a1 --link m1:mysql-server -mount /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
@@ -18,7 +18,7 @@ Sometimes you would like to enter the environment with a shell. To do this, we w
 `docker exec -it a1 /bin/bash`{{execute}}  
 
 ### Install mysqli 
-For php to establish a connection to the MySQL database, it needs the mysqli extension. But foror some reason, this image does not come with the extension and therefor we have to download it with the `docker-php-ext` commands supplied to us by the php image:  
+For php to establish a connection to the MySQL database, it needs the mysqli extension. But for some reason, this image does not come with the extension and therefore we have to download it with the `docker-php-ext` commands supplied to us by the php image:  
 `docker-php-ext-install mysqli`{{execute}}  
   
 `docker-php-ext-enable mysqli`{{execute}}  
