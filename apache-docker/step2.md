@@ -11,7 +11,7 @@ Just like when we started the MySQL container, we want to use additional paramet
 * *`-p`*, this parameter maps a host port to a container port. By using this parameter you can host multiple applications that, from the perspective of the container, listen at the same port. But outside of the container, the application is accessed on whatever port the host machine has been assigned to forward from. We will let the port 8080 on the host machine map to the 80 port on the apache container.  
 
 Let us start the container:  
-`docker run --name a1 --link m1:mysql-server -mount /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
+`docker run --name a1 --link m1:mysql-server -v /root/html:/var/www/html -d -p 8080:80 php:7.2-apache`{{execute}}  
 
 ## Open a shell to the container
 Sometimes you would like to enter the environment with a shell. To do this, we will run the bash command from within the container, with the `docker exec` command. But without parameters this shell would be daemonized like the container, so to make it interactive for us we add the `-it` paramter:  
