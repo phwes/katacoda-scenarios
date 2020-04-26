@@ -3,6 +3,7 @@ Katacoda's ubuntu image has not updated it's PPAs for a while. This might take a
 `apt update`{{execute}}  
 To interact with our mysql container, when it has been started, we will use the normal mysql-client:  
 `apt install mysql-client`{{execute}}  
+If you are prompted for input, choose the default options.
 
 # MySQL
 
