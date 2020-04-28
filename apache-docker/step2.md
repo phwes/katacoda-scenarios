@@ -20,7 +20,7 @@ Sometimes you would like to enter the environment with a shell. To do this, we w
 ## Verify the link
 You can verify that we have established the link to our MySQL container by looking in the `/etc/hosts` file:  
 `cat /etc/hosts`{{execute}}  
-In the next step we will use this link to establish a connection.  
+In step 3 we will use this link to establish a connection.  
 
 ### Install mysqli 
 For php to establish a connection to the MySQL database, it needs the mysqli extension. But for some reason, this image does not come with the extension and therefore we have to download it with the `docker-php-ext` commands supplied to us by the php image:  
