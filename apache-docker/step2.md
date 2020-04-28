@@ -19,7 +19,7 @@ Sometimes you would like to enter the environment with a shell. To do this, we w
 
 ## Verify the link
 You can verify that we have established the link to our MySQL container by looking in the `/etc/hosts` file:  
-`less /etc/hosts`{{execute}}  
+`cat /etc/hosts`{{execute}}  
 In the next step we will use this link to establish a connection.  
 
 ### Install mysqli 
