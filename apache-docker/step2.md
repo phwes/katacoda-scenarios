@@ -1,6 +1,6 @@
 
 # Apache web server
-You rarely use just a database without any other service accessing it. For this tutorial Apache web server will be the one to access and use the MySQL database. Apache has its own docker image `httpd`, but it comes without php support. Therefore we will use the php image version `php:7.2-apache` instead. This image comes with both apache and php. Sadly the image seems to miss the impartant module `mysqli`, but we will fix that in one of the steps below. 
+You rarely use a database without any other service accessing it. For this tutorial Apache web server will be the one to access and use the MySQL database. Apache has its own docker image `httpd`, but it comes without php support. Therefore we will use the php image version `php:7.2-apache` instead. This image comes with both apache and php. Sadly the image seems to miss the impartant module `mysqli`, but we will fix that in one of the steps below. 
 
 ## Pull apache image
 `docker pull php:7.2-apache`{{execute}}  
