@@ -2,7 +2,7 @@
   "title": "Deploy apache with docker",
   "description": "Deploy and connect an apache and SQL DB container as well as create persistent storage",
   "difficulty": "Beginner",
-  "time": "15",
+  "time": "20",
   "details": {
     "steps": [
       {
