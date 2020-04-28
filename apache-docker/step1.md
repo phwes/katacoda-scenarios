@@ -41,6 +41,7 @@ Exit the MySQL interface and restart the container:
 `docker restart m1`{{execute}}  
 Verify that the database still exists:  
 `mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
+  
 `show databases;`{{execute}}  
 *If you want to see that a container itself is stateless, try the same procedure but without the `-v` parameter*  
 ## Fix hashing, DO NOT SKIP THIS STEP
