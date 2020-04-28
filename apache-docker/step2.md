@@ -17,6 +17,11 @@ Let us start the container:
 Sometimes you would like to enter the environment with a shell. To do this, we will run the bash command from within the container, with the `docker exec` command. But without parameters this shell would be daemonized like the container, so to make it interactive for us we add the `-it` paramter:  
 `docker exec -it a1 /bin/bash`{{execute}}  
 
+## Verify the link
+You can verify that we have established the link to our MySQL container by looking in the `/etc/hosts` file:  
+`less /etc/hosts`{{execute}}  
+In the next step we will use this link to establish a connection.  
+
 ### Install mysqli 
 For php to establish a connection to the MySQL database, it needs the mysqli extension. But for some reason, this image does not come with the extension and therefore we have to download it with the `docker-php-ext` commands supplied to us by the php image:  
 `docker-php-ext-install mysqli`{{execute}}  
