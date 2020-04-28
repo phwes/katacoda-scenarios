@@ -25,7 +25,7 @@ First we will start an MySQL container. MySQL stores its data in /var/lib/mysql 
 Note that with the `-v` parameter, the directory mysql_volume is created automatically.  
 
 ## Test the MySQL database
-*Note: Katacoda can experience some lag from time to time. Meaning that if a command fails, wait a moment and then try the command again.*   
+*Note: Katacoda can experience some lag from time to time. Meaning that if a command fails, wait a moment and then try the command again. This is particularly true for the first mysql command below.*   
 To access the MySQL databases inside the container we simply run the `mysql` command from our host. This will connect to the MySQL interface on port 3306 on the container.  
 `mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
 Since this is the first container we assume it starts on the IP 172.18.0.2, but if this was incorrect, run the following command and then use the address that shows up instead:  
