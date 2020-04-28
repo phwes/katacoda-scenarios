@@ -24,7 +24,7 @@ For php to establish a connection to the MySQL database, it needs the mysqli ext
 `docker-php-ext-enable mysqli`{{execute}}  
   
 `apachectl restart`{{execute}}  
-
+You will get a message about the server's domain name, but you can ignore it.
 ## Create index page
 I have supplied you with a couple of test php-pages that can be used for the apache server.  
 Let us begin by moving the php testpage to our bind point:  
