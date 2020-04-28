@@ -27,6 +27,6 @@ For php to establish a connection to the MySQL database, it needs the mysqli ext
 You will get a message about the server's domain name, but you can ignore it.
 ## Create index page
 I have supplied you with a couple of test php-pages that can be used for the apache server.  
-Let us begin by moving the php testpage to our bind point:  
+Let us begin by moving the php testpage to our volume, so the container can access it:  
 `mv test.txt html/index.php`{{execute}}  
 Click the + at the top of the terminal and `select port to view on Host1`. Then enter the port on our host machine that is connected to the apache container (8080). You should now see a php information page. 
