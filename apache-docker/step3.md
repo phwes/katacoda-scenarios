@@ -21,7 +21,9 @@ Exit MySQL interface:
 
 ## Change load entries
 For loading these entries I have prepared a small php page. This page will connect to the MySQL server on host "mysql-server" and print all entries in the table "meetings" in the database "myTestDB". The file is heavily inspired from w3schools [example](https://www.w3schools.com/php/php_mysql_select.asp).  
-  
+
+You can view the file and note that the connection is established with the link `mysql-server`:  
+`less test_mysql_query`{{execute}}  
 As with the php info page, just move the file as index.php to the shared volume space:  
 `mv test_mysql_query html/index.php`{{execute}}  
   
