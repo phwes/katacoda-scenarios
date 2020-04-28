@@ -42,7 +42,7 @@ Exit the MySQL interface and restart the container:
 Verify that the database still exists:  
 `mysql -uroot -pguest -h 172.18.0.2 -P 3306`{{execute}}  
 `show databases;`{{execute}}  
-*If you want to see that a container itself is stateless, try the same procedure buth without the `-v` parameter*  
+*If you want to see that a container itself is stateless, try the same procedure but without the `-v` parameter*  
 ## Fix hashing, DO NOT SKIP THIS STEP
 The PHP version we will use and MySQL are experienceing some password hashing compatability issues, unrelated to docker.  
 To fix this, for the root user, we need to run the following command in the MySQL interface:  
