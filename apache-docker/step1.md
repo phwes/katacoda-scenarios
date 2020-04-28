@@ -14,7 +14,7 @@ The numbers after the colon refer to the version number.
 
 ## Start a MySQL container
 To create and start a docker container we use the `docker run [container image]` command. But we want to add a few parameters, so the container can match our needs:  
-* `-v`, containers are stateless by design. This means that they are unable to store data when they are stopped or restarted. To counter this we can use volumes. Volumes will map a directory on the host machine to a directory in the container. In this way data can be stored and loaded on the host machine even when the container has been stopped.  
+* `-v`, containers are stateless by design. This means that they are unable to store persistent data for when they are restarted. To counter this we can use volumes. Volumes will map a directory on the host machine to a directory in the container. In this way data can be stored and loaded from the host machine even when the container has been stopped.  
 * `--name`, docker will assign a name to the container if this parameter is not specified. But it is a nice feature to name your own containers.
 * `-d`, this will simply daemonize the container so it won't block your shell.  
 * `-e`, this sets environment variabels. We will use this to set the root password.
